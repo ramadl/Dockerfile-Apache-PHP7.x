@@ -1,0 +1,14 @@
+********************************************************************************
+********************          libressl2.6-libcrypto         ******************** 
+********************************************************************************
+
+Some modules need libressl2.6-libcrypto package.To install it enter to the
+container with this command:
+
+    docker exec -it <container_name> sh
+
+Once you are in the container exec the following command:
+
+    apk --no-cache add libressl2.6-libcrypto
+
+Now you can install php7.1 modules that require libressl2.6-libcrypto
