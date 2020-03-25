@@ -4,102 +4,24 @@ LABEL maintainer="RamaDL ramirodldeveloper@gmail.com"
 
 WORKDIR /shared
 
-COPY ./httpd.conf /etc/apache2/httpd.conf
 
 ADD https://repos.php.earth/alpine/phpearth.rsa.pub /etc/apk/keys/phpearth.rsa.pub
 
-RUN echo "https://repos.php.earth/alpine/v3.7"  >> /etc/apk/repositories 
-
-RUN apk add --no-cache apache2 \ 
+RUN echo "https://repos.php.earth/alpine/v3.7"  >> /etc/apk/repositories \
+    && mkdir /run/apache2 \
+    && addgroup -S httpd \ 
+    && adduser -S httpd -G httpd \
+    && chown httpd /run/apache2 \
+    && chgrp httpd /run/apache2 \
+    && apk add --no-cache apache2 \ 
     libressl2.6-libcrypto \
-    php7.1 \
-    php7.1-dev \
-    php7.1-shmop \
-    php7.1-cmark \
-    php7.1-xmlwriter \
-    php7.1-embed \
-    php7.1-posix \
-    cacti-php7 \
-    xapian-bindings-php7 \
-    php7.1-yaml \
-    php7.1-bz2 \
-    php7.1-pdo \
-    php7.1-ctype \
-    php7.1-mbstring \
-    php7.1-mysqli \
-    php7.1-curl \
-    php7.1-pspell \
-    php7.1-xmlrpc \
-    php7.1-imap \
-    php7.1-litespeed \
-    php7.1-mongodb \
-    php7.1-meminfo \
-    php7.1-phar \
-    php7.1-swoole \
-    php7.1-opcache \
-    php7.1-sockets \
-    php7.1-pear \
-    php7.1-xmlreader \
-    php7.1-dom \
     php7.1-apache2 \
-    php7.1-mysqlnd \
-    php7.1-xsl \
-    php7.1-enchant \
-    php7.1-wddx \
-    php7.1-tokenizer \
-    php7.1-xml \
-    php7.1-pdo_odbc \
-    php7.1-doc \
-    php7.1-apcu \
-    php7.1-mcrypt \
-    php7.1-pdo_dblib \
-    php7.1-gettext \
-    php7.1-sysvsem \
-    php7.1-pdo_mysql \
-    php7.1-common \
-    php7.1-sodium \
-    php7.1-gmp \
-    php7.1-calendar \
-    php7.1-openssl \
-    php7.1-simplexml \
-    php7.1-soap \
-    php7.1-cgi \
-    php7.1-pdo_sqlite \
-    php7.1-odbc \
-    php7.1-zip \
-    php7.1-ds \
-    php7.1-pgsql \
-    php7.1-exif \
-    php7.1-memcached \
-    php7.1-sqlite3 \
-    php7.1-zlib \
-    php7.1-json \
-    php7.1-fileinfo \
-    php7.1-session \
-    php7.1-gd \
-    php7.1-snmp \
-    php7.1-xlswriter \
-    php7.1-ldap \
-    php7.1-pcntl \
-    php7.1-pdo_pgsql \
-    php7.1-redis \
-    php7.1-composer \
-    php7.1-xdebug \
-    php7.1-fpm \
-    php7.1-tidy \
-    php7.1-sysvshm \
-    php7.1-ftp \
-    php7.1-dba \
-    php7.1-intl \
-    php7.1-ast \
-    php7.1-phpdbg \
-    php7.1-bcmath \
-    php7.1-imagick \
-    php7.1-sysvmsg \
-    php7.1-recode \
-    php7.1-iconv
+    php7.1
 
-    
+
+COPY ./httpd.conf /etc/apache2/httpd.conf
+ 
 
 EXPOSE 80
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+
+CMD ["httpd", "-D", "FOREGROUND"]
