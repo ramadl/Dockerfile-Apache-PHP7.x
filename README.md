@@ -14,13 +14,13 @@ _The following steps will guide you to get a copy of the project and run it on y
   
 ### Prerequisites
   
-_Fundamental knowledges about [Docker](https://docs.docker.com/get-started/) and [Dockerfiles](https://docs.docker.com/get-started/part2/)._
+* _Fundamental knowledges about [Docker](https://docs.docker.com/get-started/) and [Dockerfiles](https://docs.docker.com/get-started/part2/)._
     
-_Docker installed. If you don't have it, [install Docker](https://docs.docker.com/install/) in your computer._
+* _Docker installed. If you don't have it, [install Docker](https://docs.docker.com/install/) in your computer._
     
-_Clone the repository:_  
+* _Clone the repository:_  
   
-    git clone https://github.com/RamaDL/Docker-alpine-apache-php.git
+      git clone https://github.com/RamaDL/Docker-alpine-apache-php.git
   
   
 ### Installation
