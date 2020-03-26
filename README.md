@@ -1,4 +1,4 @@
-# apache-php Dockerfiles for development enviroment
+# apache-php7.x
 
 _Docker-alpine-apache-php is a group of Dockerfiles for ease the task of get up and running an apache-php enviroment for development. Each folder contain a Dockerfile with it's respective version of php (from 7 to 7.4) and apache for build the images. Pick the one you needs._
 
