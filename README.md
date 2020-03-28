@@ -1,3 +1,5 @@
+![Image of Yaktocat](https://ugeek.github.io/blog/images-blog/docker.png)
+
 # Docker apache-php7.x
   
   _apache-php7.x_ is a project that contain a group of Dockerfiles for ease the task of get up and running an apache-php Docker container only for development and testing purposes. Each folder has a bunch of files to start our desired enviroment. Pick the one you need.  
