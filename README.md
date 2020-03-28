@@ -2,7 +2,7 @@
   
   _apache-php7.x_ is a project that contain a group of Dockerfiles for ease the task of get up and running an apache-php Docker container only for development and testing purposes. Each folder has a bunch of files to start our desired enviroment. Pick the one you need.  
   
-  Altough this project is designed for those tech entusiasts thath want to learn the basis of Docker an get their hands dirty with conteinerization techniques. This repository can be used as a base for create more complex images for production too.
+  Altough this project is designed for those tech entusiasts thath want to learn the basis of Docker an get their hands dirty with conteinerization techniques. This repository can be used as a base to create more complex images for production.
   
   All the containers derived from this project has root access to make any change thath we want. If our intention is to used in production, this is a security concern so please make the necessary tweaks for thath purpouse.
   
@@ -30,12 +30,14 @@ The following steps will guide us to get a Doceker container running on our loca
     cd repository_path/Docker-alpine-apache-php/php_version/
     
   2 - Edit _httpd.conf_ inside the php_version folder. 
+  
+  3 - (Optional) Edit _Dockerfile_ inside the php versión we want and add the desired php modules in the _RUN_ instruction.
     
-  3 - Build the desired image ([php_version in Backus–Naur form](https://en.wikipedia.org/wiki/Backus–Naur_form))
+  4 - Build the desired image ([php_version in Backus–Naur form](https://en.wikipedia.org/wiki/Backus–Naur_form))
   
     docker build -t apache-php:<php_version> .
   
-  4 - Create the container
+  5 - Create the container
   
     docker build --name apache-php -p 127.0.0.1:80:80 -v /path/to/your/www/folder:/shared -d apache-php:<php_version>
     
@@ -43,7 +45,7 @@ The following steps will guide us to get a Doceker container running on our loca
   * -v    allows us to enter the www folder from the shared folder inside the container.  
   * -d    starts the container in background.  
     
-  * Gain access to the container
+  6 - Gain access to the container
   
     docker exec -it apache-php sh
     
@@ -57,5 +59,5 @@ The following steps will guide us to get a Doceker container running on our loca
 
 ### Authors
 
-* Dutto Luquez, Ramiro [RamaDL](https://github.com/RamaDL)
+* Dutto Luquez, Ramiro ( [RamaDL](https://github.com/RamaDL) )
 
