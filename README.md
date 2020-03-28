@@ -29,9 +29,9 @@ The following steps will guide us to get a Doceker container running on our loca
   
     cd repository_path/Docker-alpine-apache-php/php_version/
     
-  2 - Edit _httpd.conf_ inside the php_version folder. 
+  2 - Edit **_httpd.conf_** inside the php_version folder. 
   
-  3 - (Optional) Edit _Dockerfile_ inside the php versión we want and add the desired php modules in the _RUN_ instruction.
+  3 - (Optional) Edit **_Dockerfile_** inside the php versión we want and add the desired php modules in the **RUN** instruction.
     
   4 - Build the desired image ([php_version in Backus–Naur form](https://en.wikipedia.org/wiki/Backus–Naur_form))
   
