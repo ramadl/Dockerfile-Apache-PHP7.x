@@ -29,9 +29,9 @@ The following steps will guide us to get a Doceker container running on our loca
   
     cd repository_path/Docker-alpine-apache-php/php_version/
     
-  2 - Edit **_httpd.conf_** inside the php_version folder. 
+  2 - (Optional) Edit **_httpd.conf_** inside the php_version folder for apache2 configuration. 
   
-  3 - (Optional) Edit **_Dockerfile_** inside the php versión we want and add the desired php modules in the **RUN** instruction.
+  3 - (Optional) Edit **_Dockerfile_** inside the php versión folder and add the desired php modules in the **RUN** instruction.
     
   4 - Build the desired image ([php_version in Backus–Naur form](https://en.wikipedia.org/wiki/Backus–Naur_form))
   
@@ -41,9 +41,9 @@ The following steps will guide us to get a Doceker container running on our loca
   
     docker build --name apache-php -p 127.0.0.1:80:80 -v /path/to/your/www/folder:/shared -d apache-php:<php_version>
     
-  * -p    maps our localmachine port 80 to the container port 80. 
-  * -v    allows us to enter the www folder from the shared folder inside the container.  
-  * -d    starts the container in background.  
+  * **-p**    maps our localmachine port 80 to the container port 80. 
+  * **-v**    allows us to enter the www folder from the shared folder inside the container.  
+  * **-d**    starts the container in background.  
     
   6 - Gain access to the container
   
