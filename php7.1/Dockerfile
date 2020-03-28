@@ -16,7 +16,7 @@ RUN echo "https://repos.php.earth/alpine/v3.7"  >> /etc/apk/repositories \
                             php7.1-apache2 \
                             php7.1
 
-COPY ./httpd.conf /etc/apache2/httpd.conf
+COPY ./httpd.conf /etc/apache2/httpd.conf 
 
 EXPOSE 80
 
