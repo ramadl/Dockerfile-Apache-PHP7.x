@@ -1,22 +1,22 @@
 # apache-php7.x
   
-  _apache-php7.x is a project that contain a group of Dockerfiles for ease the task of get up and running an apache-php Docker container only for development and testing purposes. Each folder has bunch of files for start your desired enviroment. Pick the one you need._  
+  _apache-php7.x_ is a project that contain a group of Dockerfiles for ease the task of get up and running an apache-php Docker container only for development and testing purposes. Each folder has a bunch of files to start our desired enviroment. Pick the one you need.  
   
-  _Altough this project is designed for those tech entusiasts thath want to learn the basis of Docker an get their hands dirty with conteinerization techniques. This repository can be used as a base for create more complex images for production too._
+  Altough this project is designed for those tech entusiasts thath want to learn the basis of Docker an get their hands dirty with conteinerization techniques. This repository can be used as a base for create more complex images for production too.
   
-  _All the containers derived from this project has root access to make any change thath you want. This is a security concern, so please if you are intention is to used in production, please make the tweaks for thath purpouse._
+  All the containers derived from this project has root access to make any change thath we want. If our intention is to used in production, this is a security concern so please make the necessary tweaks for thath purpouse.
   
   
 ## Getting started
   
-_The following steps will guide you to get a copy of the project and run it on your local machine for development and testing purpouses._
+The following steps will guide us to get a Doceker container running on our local machine for development and testing purpouses.
   
   
 ### Prerequisites
   
 * _Fundamental knowledges about [Docker](https://docs.docker.com/get-started/) and [Dockerfiles](https://docs.docker.com/get-started/part2/)._
     
-* _Docker installed. If you don't have it, [install Docker](https://docs.docker.com/install/) in your computer._
+* _Docker installed. If we don't have it, [install Docker](https://docs.docker.com/install/) in our computer._
     
 * _Clone the repository:_  
   
@@ -25,4 +25,35 @@ _The following steps will guide you to get a copy of the project and run it on y
   
 ### Installation
   
+  cd the repository
+  
+    cd repository_path/Docker-alpine-apache-php/php_version/
+    
+  Build the desired image ([php_version in Backus–Naur form](https://en.wikipedia.org/wiki/Backus–Naur_form))
+  
+    docker build -t apache-php:<php_version> .
+  
+  Create the container
+  
+    docker build --name apache-php -p 127.0.0.1:80:80 -v /path/to/your/www/folder:/shared -d apache-php:<php_version>
+    
+  * -p    maps our localmachine port 80 to the container port 80
+  * -v    allows us to enter the www folder from the shared folder inside the container
+  * -d    starts the container in background
+    
+  Gain access to the container
+  
+    docker exec -it apache-php sh
+    
+  Once we are inside the container we have root access to play around.
+    
+    
+  ### Running the tests
+    
+  After we have the running container is time to test it. Go to [http://localhost:80](http://localhost:80) and we have to see our/s web project/s.
+    
+
+### Authors
+
+* Dutto Luquez, Ramiro [RamaDL](https://github.com/RamaDL)
 
