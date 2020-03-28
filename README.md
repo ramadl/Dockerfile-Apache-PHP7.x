@@ -29,7 +29,7 @@ The following steps will guide us to get a Doceker container running on our loca
   
 ### Installation
   
-  1 - cd the repository:
+  1 - cd to the php version in the repository folder:
   
     cd repository_path/Docker-alpine-apache-php/php_version/
     
