@@ -13,8 +13,8 @@ RUN echo "https://repos.php.earth/alpine/v3.7"  >> /etc/apk/repositories \
     && chown httpd /run/apache2 \
     && chgrp httpd /run/apache2 \
     && apk add --no-cache   apache2 \ 
-                            php7.1-apache2 \
-                            php7.1
+                            php7.4-apache2 \
+                            php7.4
 
 COPY ./httpd.conf /etc/apache2/httpd.conf
 
