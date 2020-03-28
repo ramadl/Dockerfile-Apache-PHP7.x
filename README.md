@@ -1,4 +1,6 @@
-![Image of Yaktocat](https://ugeek.github.io/blog/images-blog/docker.png)
+<p align="center">
+<img src="https://ugeek.github.io/blog/images-blog/docker.png" width="250"> 
+</p>
 
 # Docker apache-php7.x
   
