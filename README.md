@@ -8,8 +8,6 @@
   
   This project is designed for tech enthusiasts who want to learn the basis of Docker and get their hands dirty with containerization techniques as well as for those who want to create complex images for production.
   
-  All the containers derived from this project has root access to make any change thath we want. If our intention is to used in production, this is a security concern so please make the necessary tweaks for thath purpouse.
-  
   You can make all the changes you want since all the containers derived from this project has root access. If your intention is to use this program to produce, please make the necessary tweaks for that purpose due to security concerns.
   
   
