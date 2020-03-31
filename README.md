@@ -4,11 +4,13 @@
 
 # Docker apache-php7.x
   
-  _apache-php7.x_ is a project that contain a group of Dockerfiles for ease the task of get up and running an apache-php Docker container only for development and testing purposes. Each folder has a bunch of files to start our desired enviroment. Pick the one you need.  
+  _apache-php7.x_ is a project which contains a group of Dockerfiles to get up and running an apache -php Docker container for development and testing purposes. Each folder contains helpful and efficient files to start a desired environment. Pick the one you need. 
   
-  Altough this project is designed for those tech entusiasts thath want to learn the basis of Docker an get their hands dirty with conteinerization techniques. This repository can be used as a base to create more complex images for production.
+  This project is designed for tech enthusiasts who want to learn the basis of Docker and get their hands dirty with containerization techniques as well as for those who want to create complex images for production.
   
   All the containers derived from this project has root access to make any change thath we want. If our intention is to used in production, this is a security concern so please make the necessary tweaks for thath purpouse.
+  
+  You can make all the changes you want since all the containers derived from this project has root access. If your intention is to use this program to produce, please make the necessary tweaks for that purpose due to security concerns.
   
   
 ## Getting started
