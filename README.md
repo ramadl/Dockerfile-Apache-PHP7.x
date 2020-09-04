@@ -43,7 +43,7 @@ The following steps will guide us to get a apache-php Docker container running o
   
   5 - Create the container:
   
-    docker build --name apache-php -p 127.0.0.1:80:80 -v /path/to/your/www/folder:/shared -d apache-php:<php_version>
+    docker run --name apache-php -p 127.0.0.1:80:80 -v /path/to/your/www/folder:/shared -d apache-php:<php_version>
     
   * **-p**    maps our localmachine port 80 to the container port 80. 
   * **-v**    allows us to enter the www folder from the shared folder inside the container.  
